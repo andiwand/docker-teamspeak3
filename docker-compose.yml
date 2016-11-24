@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  teamspeak3:
+    build: .
+    image: andiwand/teamspeak3
+    container_name: teamspeak3
+    restart: always
+    ports:
+      - "9987:9987/udp"
+      - "10011:10011"
+      - "30033:30033"
+    volumes:
+      - config:/etc/teamspeak3
+      - data:/var/lib/teamspeak3
+
+volumes:
+  config:
+  data:
