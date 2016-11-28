@@ -42,4 +42,4 @@ EXPOSE 9987/udp 10011 30033
 
 WORKDIR "${TS3_HOME}"
 
-ENTRYPOINT "/usr/local/share/docker-teamspeak3/entrypoint.sh"
+ENTRYPOINT [ "/usr/local/share/docker-teamspeak3/entrypoint.sh" ]
